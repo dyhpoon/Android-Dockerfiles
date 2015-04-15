@@ -6,6 +6,7 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 * OpenJDK version 7
 * Android SDK r24.1.2
 * Android SDK Platform-tools
-* Android SDK Build-tools r20-r22.0.1 
+* Android Support Repository and Library
+* All Android SDK Build-tools
 * Android API 21-22
 * Git

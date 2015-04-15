@@ -17,10 +17,14 @@ RUN cd /opt && rm -f android-sdk_r24.1.2-linux.tgz
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
-# Other tools and APIs
-RUN echo y | android update sdk --filter platform-tools,extra-android-support --no-ui --force
-RUN echo y | android update sdk --filter build-tools-22.0.1,build-tools-22,build-tools-21.1.2,build-tools-21.1.1,build-tools-21.1,build-tools-21.0.2,build-tools-21.0.1,build-tools-21,build-tools-20 --no-ui --force --all
+# Install All Build tools
+RUN android list sdk --all | grep -i "Android SDK Build-tools" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
+# Install Android API
 RUN echo y | android update sdk --filter android-22,android-21 --no-ui --force --all
+# Install tools
+RUN echo y | android update sdk --filter platform-tools,extra-android-support --no-ui --force
+# Install Supprting Libraries
+RUN android list sdk --all | grep -i "Android Support \(Library\|Repository\)" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 
 # Git to pull external repositories of Android app projects
 RUN apt-get install -y --no-install-recommends git
