@@ -1,11 +1,11 @@
-FROM ubuntu:12.04
+FROM ubuntu:14.04
 
 MAINTAINER Darren "dyhpoon@gmail.com"
 
 RUN apt-get update -qq
 
 # Dependencies to execute android
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk libgd2-xpm ia32-libs ia32-libs-multiarch
+RUN apt-get install -y --no-install-recommends openjdk-7-jdk lib32ncurses5 lib32stdc++6
 
 # Main Android SDK
 RUN apt-get install -y --no-install-recommends wget
