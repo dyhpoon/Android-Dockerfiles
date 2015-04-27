@@ -5,7 +5,7 @@ MAINTAINER Darren "dyhpoon@gmail.com"
 RUN apt-get update -qq
 
 # Dependencies to execute android
-RUN apt-get install -y --no-install-recommends openjdk-7-jdk lib32ncurses5 lib32stdc++6
+RUN apt-get install -y --no-install-recommends openjdk-7-jdk lib32ncurses5 lib32stdc++6 lib32z1
 
 # Main Android SDK
 RUN apt-get install -y --no-install-recommends wget
