@@ -2,7 +2,7 @@
 Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tree/master/android)
 
 ##Contents
-* Ubuntu 14.04 Precise 64bit
+* Ubuntu 14.04
 * OpenJDK version 7
 * Android SDK r24.1.2
 * Android SDK Platform-tools
@@ -10,3 +10,7 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 * All Android SDK Build-tools
 * Android API 21-22
 * Git
+
+##Resources
+* [Android continuous integration with Jenkins and Docker](http://blog.csdn.net/gongmingqm10/article/details/45009633) (in Chinese)
+* [Android Continuous Integration](http://blog.csdn.net/gongmingqm10/article/details/45009259) (in Chinese)
