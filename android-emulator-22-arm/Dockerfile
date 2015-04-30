@@ -6,7 +6,7 @@ MAINTAINER Darren "dyhpoon@gmail.com"
 RUN echo y | android update sdk -a --no-ui --filter sys-img-armeabi-v7a-android-22 --force
 
 # Set up and run emulator
-RUN echo no | android create avd --force -n test -t android-22
+RUN echo no | android create avd --force -n test -c 30M -t android-22
 # Avoid emulator assumes HOME as '/'.
 ENV HOME /root
 ADD wait-for-emulator /usr/local/bin/
