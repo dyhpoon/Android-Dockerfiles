@@ -8,9 +8,9 @@ RUN apt-get update -qq
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk lib32ncurses5 lib32stdc++6 lib32z1 wget
 
 # Main Android SDK
-RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r24.1.2-linux.tgz
-RUN cd /opt && tar xzf android-sdk_r24.1.2-linux.tgz
-RUN cd /opt && rm -f android-sdk_r24.1.2-linux.tgz
+RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r24.2-linux.tgz
+RUN cd /opt && tar xzf android-sdk_r24.2-linux.tgz
+RUN cd /opt && rm -f android-sdk_r24.2-linux.tgz
 
 # SET ENV
 ENV ANDROID_HOME /opt/android-sdk-linux
