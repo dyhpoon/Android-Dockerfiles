@@ -9,7 +9,7 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 ##Usage
 ```
 docker run --privileged -it \
- -v /Users/darren/docker/instagrab_android/:/workspace \
+ -v /Path/to/your/android/project/:/workspace \
  dyhpoon/android-emulator-19 start-emulator \
  "./gradlew connectedAndroidTest"
 ```
@@ -19,7 +19,7 @@ It is recommended to use your host's gradle cache to speed up build time. For ex
 ```
 docker run --privileged -it \
  -v /Path/to/your/android/project/:/workspace \
- -v /Home/.gradle/:/root/.gradle \ 
+ -v /Home/.gradle/:/root/.gradle \
  dyhpoon/android-emulator-19 start-emulator \
  "./gradlew connectedAndroidTest"
 ```
