@@ -8,9 +8,9 @@ RUN apt-get update -qq
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk lib32ncurses5 lib32stdc++6 lib32z1 wget
 
 # Main Android SDK
-RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r24.2-linux.tgz
-RUN cd /opt && tar xzf android-sdk_r24.2-linux.tgz
-RUN cd /opt && rm -f android-sdk_r24.2-linux.tgz
+RUN cd /opt && wget -q http://dl.google.com/android/android-sdk_r24.3-linux.tgz
+RUN cd /opt && tar xzf android-sdk_r24.3-linux.tgz
+RUN cd /opt && rm -f android-sdk_r24.3-linux.tgz
 
 # SET ENV
 ENV ANDROID_HOME /opt/android-sdk-linux
@@ -20,8 +20,10 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN android list sdk --all | grep -i "Android SDK Build-tools" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 # Install Android API
 RUN echo y | android update sdk --filter android-22,android-21,android-20,android-19,android-18,android-17,android-16,android-15 --no-ui --force --all
-# Install tools
-RUN echo y | android update sdk --filter platform-tools,extra-android-support --no-ui --force
+# Platform tools
+RUN android list sdk --all | grep -i "Android SDK Platform-tools, revision 22" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
+# Support libraries
+RUN echo y | android update sdk --filter extra-android-support --no-ui --force
 # Install Supprting Libraries
 RUN android list sdk --all | grep -i "Android Support \(Library\|Repository\)" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 
