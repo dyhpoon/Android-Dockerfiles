@@ -25,7 +25,7 @@ RUN android list sdk --all | grep -i "Android SDK Platform-tools, revision 22" |
 # Support libraries
 RUN echo y | android update sdk --filter extra-android-support --no-ui --force
 # Install Supprting Libraries
-RUN android list sdk --all | grep -i "Android Support \(Library\|Repository\)" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
+RUN android list sdk --all | grep -i "\(Google Repository\|Android Support \(Library\|Repository\)\)" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 
 # Git to pull external repositories of Android app projects
 RUN apt-get install -y --no-install-recommends git
