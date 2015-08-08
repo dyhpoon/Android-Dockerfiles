@@ -8,7 +8,7 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 * Android SDK Platform-tools
 * Android Support Repository and Library
 * All Android SDK Build-tools
-* Android API 15-22
+* Android API 16-22
 * Git
 
 ##Resources
