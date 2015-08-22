@@ -4,11 +4,12 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 ##Contents
 * Ubuntu 14.04
 * OpenJDK version 7
-* Android SDK r24.3
+* Android SDK r24.3.4
 * Android SDK Platform-tools
+* Google Repository
 * Android Support Repository and Library
 * All Android SDK Build-tools
-* Android API 16-22
+* Android API 16-23
 * Git
 
 ##Resources

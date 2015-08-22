@@ -4,14 +4,17 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 ##Contents
 * Ubuntu 14.04
 * OpenJDK version 7
-* Android SDK r24.3
+* Android SDK r24.3.4
 * Android SDK Platform-tools
+* Google Repository
 * Android Support Repository and Library
 * All Android SDK Build-tools
-* Android API 15-22
+* Android API 16-23
 * Git
 
 ##Emulators
+[Android Emulator 23](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-23)
+
 [Android Emulator 22](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-22)
 
 [Android Emulator 21](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-21)
@@ -25,8 +28,6 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 [Android Emulator 17](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-17)
 
 [Android Emulator 16](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-16)
-
-[Android Emulator 15](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-15)
 
 ##Resources
 * [Android continuous integration with Jenkins and Docker](http://blog.csdn.net/gongmingqm10/article/details/45009633) (in Chinese)
